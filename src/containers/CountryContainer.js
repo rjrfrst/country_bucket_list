@@ -43,7 +43,7 @@ const CountryContainer = () => {
                 />
 
                 {/*  */}
-                <CountryButton onButtonClick={loadCountryData}/>
+                {/* <CountryButton onButtonClick={loadCountryData}/> */}
 
 
         </>

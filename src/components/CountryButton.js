@@ -1,7 +1,7 @@
-const CountryButton = ({onButtonClick}) => {
-    return ( 
-        <button onClick={onButtonClick}>Add a country</button>
-     );
-}
+// const CountryButton = ({onButtonClick}) => {
+//     return ( 
+//         <button onClick={onButtonClick}>Add a country</button>
+//      );
+// }
  
-export default CountryButton;
+// export default CountryButton;
