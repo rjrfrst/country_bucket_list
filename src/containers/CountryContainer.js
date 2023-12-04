@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import CountryToVisit from "../components/CountryToVisit";
 import VisitedCountry from "../components/VisitedCountry";
+import CountryButton from "../components/CountryButton";
 
 const CountryContainer = () => {
 
@@ -17,6 +18,13 @@ const CountryContainer = () => {
     useEffect ( () => {
         loadCountryData();
     }, [])
+
+    // Function to update a country
+    const handleNewCountry = (newCountry) => {
+        const updatedCountries = [...countriesVisited]
+        updatedCountries.push(newCountry);
+        setCountriesVisited(updatedCountries);
+    }
     
     
     return ( 
@@ -26,10 +34,17 @@ const CountryContainer = () => {
 
                 {/* Present the user with a list of countries from which they can select from */}
                 {/* Get a prop to pass to CountryToVisit */}
-                <CountryToVisit listOfCountries={listOfCountries}/>
-                
+                <CountryToVisit listOfCountries={listOfCountries}
+                                handleNewCountry ={handleNewCountry}
+                />
+
                 {/*  */}
-                <VisitedCountry countriesVisited ={countriesVisited}/>
+                <VisitedCountry countriesVisited ={countriesVisited}
+                />
+
+                {/*  */}
+                <CountryButton onButtonClick={loadCountryData}/>
+
 
         </>
      );

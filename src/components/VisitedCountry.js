@@ -9,8 +9,7 @@ const VisitedCountry = ({countriesVisited}) => {
         <>
             <hr></hr>
             <h2>Visited countries</h2>
-            
-            <p>{countryComponents}</p>
+            {countryComponents}
         </>
      );
 }

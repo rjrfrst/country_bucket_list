@@ -1,13 +1,14 @@
 import Country from "./Country";
 
-const CountryToVisit = ({listOfCountries}) => {
+const CountryToVisit = ({listOfCountries, handleNewCountry}) => {
 
-    const countryComponents = listOfCountries.map((country, index) => <Country country={country} key={index}/>)
+    const countryComponents = listOfCountries.map((country, index) => <Country country={country} handleNewCountry={handleNewCountry} key={index}/>)
 
     return(
         <>
         <h2>List of countries</h2>
-        {countryComponents}
+        {countryComponents} 
+        
         </>
     )
 }
