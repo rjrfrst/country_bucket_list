@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CountryToVisit from "../components/CountryToVisit";
+import VisitedCountry from "../components/VisitedCountry";
 
 const CountryContainer = () => {
 
@@ -22,7 +23,14 @@ const CountryContainer = () => {
         <>
         <h1>Country container</h1>
                 <h2>Country list</h2>
+
+                {/* Present the user with a list of countries from which they can select from */}
+                {/* Get a prop to pass to CountryToVisit */}
                 <CountryToVisit listOfCountries={listOfCountries}/>
+                
+                {/*  */}
+                <VisitedCountry countriesVisited ={countriesVisited}/>
+
         </>
      );
 }
